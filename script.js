@@ -195,7 +195,7 @@ function renderContact(email, socialLinks) {
   const address = email.trim();
   const links = socialLinks.filter((link) => link.label?.trim() && /^https:\/\/[^\s/]+/i.test(link.url));
   if (/^[^\s@?,#]+@[^\s@?,#]+\.[^\s@?,#]+$/.test(address)) {
-    links.unshift({ label: "Email FibrIQ", url: `mailto:${encodeURIComponent(address)}` });
+    links.unshift({ label: address, url: `mailto:${encodeURIComponent(address).replace("%40", "@")}` });
   }
   if (!links.length) return;
   for (const container of document.querySelectorAll("[data-contact-links]")) {

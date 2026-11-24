@@ -141,12 +141,12 @@ button { cursor: pointer; }
 .demo p { margin-top: .45rem; }
 .applications { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.15rem 2.3rem; }
 .applications > div { border-top: 1px solid var(--line); padding-top: .85rem; }
-.about-layout { align-items: start; }
-.team { border-left: 1px solid var(--line); padding-left: clamp(1.5rem, 4vw, 3.25rem); }
+.about-layout > .section-copy { max-width: 53rem; }
+.team { border-top: 1px solid var(--line); margin-top: clamp(2rem, 4vw, 3.5rem); padding-top: clamp(1.7rem, 3.5vw, 2.6rem); }
 .team h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: .85rem; }
-.team-list { display: grid; gap: 1.25rem; }
-.team-member { display: flex; gap: 1rem; align-items: start; }
-.team-member img { flex: none; width: clamp(3.5rem, 12vw, 5.25rem); aspect-ratio: 1; object-fit: cover; border-radius: .35rem; }
+.team-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.75rem); margin-top: 1.3rem; }
+.team-member img { width: 5.25rem; aspect-ratio: 1; object-fit: cover; object-position: center 30%; border-radius: .35rem; margin-bottom: .85rem; }
+.team-member h3 { margin-bottom: .4rem; }
 .team-role { font-weight: 650; margin-block: .2rem; }
 .contact { max-width: 58rem; text-align: center; }
 .contact .eyebrow, .contact .actions { justify-content: center; }
@@ -162,6 +162,7 @@ button { cursor: pointer; }
 @media (max-width: 60rem) {
   .hero { gap: 2rem; }
   .workflow { grid-template-columns: repeat(2, 1fr); }
+  .team-list { grid-template-columns: minmax(0, 1fr); max-width: 43rem; }
 }
 @media (max-width: 48rem) {
   :root { --header-height: 4.1rem; }
@@ -187,7 +188,6 @@ button { cursor: pointer; }
   .orbit-hub img { width: min(90%, 6rem); }
   .module-node img { height: 40px; }
   .demo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .team { border-left: 0; border-top: 1px solid var(--line); padding: 1.7rem 0 0; }
   .footer-layout { grid-template-columns: 1fr; }
   .site-footer nav { justify-content: flex-start; }
 }
