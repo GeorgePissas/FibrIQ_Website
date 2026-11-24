@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FibrIQ | Stronger, lighter 3D-printed parts by intelligent design</title>
+  <meta name="description" content="FibrIQ is developing engineering software for fracture-aware optimisation of lightweight structures, starting with continuous-fibre composites.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FibrIQ">
+  <meta property="og:title" content="Stronger, lighter 3D-printed parts by intelligent design">
+  <meta property="og:description" content="Fracture-aware optimisation, high-fidelity simulation and AI-assisted design exploration in one planned engineering platform.">
+  <meta property="og:image" content="./assets/illustrations/share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The FibrIQ wordmark and a blue structural bracket with continuous fibre paths.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logos/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-layout">
+      <a class="brand" href="#top" aria-label="FibrIQ home"><img src="assets/logos/fibriq.webp" alt="FibrIQ" width="136" height="49"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#technology">Technology</a>
+        <a href="#products">Products</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a class="nav-contact" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Engineering software in development</p>
+        <h1 id="hero-title">Stronger, lighter <span class="keep-together">3D-printed</span> parts by intelligent design</h1>
+        <p class="hero-intro">FibrIQ brings fracture-aware simulation, structural optimisation and AI-assisted predictions into a unified engineering design workflow, starting with fibre-reinforced composites.</p>
+        <div class="actions">
+          <a class="button button-primary" href="#technology">Explore the technology</a>
+          <a class="button button-outline" href="#contact">Partner with us</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <div class="figure-top">
+          <span>Composite bracket</span>
+          <div class="figure-switch" role="group" aria-label="Bracket view" hidden>
+            <button type="button" aria-pressed="true" data-view="fibres">Fibre paths</button>
+            <button type="button" aria-pressed="false" data-view="phase">Fracture field</button>
+          </div>
+        </div>
+        <div class="bracket-stage">
+          <img id="hero-bracket" src="assets/illustrations/bracket-fibres.webp" alt="Lightweight composite bracket with cut-outs, three mounting holes and curved continuous fibre paths." width="1140" height="733" fetchpriority="high">
+        </div>
+        <figcaption class="hero-caption">
+          <span id="bracket-caption" aria-live="polite">Continuous fibre trajectories</span>
+          <span class="spectrum" aria-hidden="true"></span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section band" id="challenge" aria-labelledby="challenge-title">
+      <div class="shell split">
+        <div class="section-copy">
+          <p class="eyebrow">The challenge</p>
+          <h2 id="challenge-title">One part, competing objectives</h2>
+          <p>In a fibre-reinforced composite, geometry, material distribution and fibre routing all shape how the part carries load and how damage spreads.</p>
+          <p>The fibre angle that maximises stiffness can differ from the angle that best resists fracture. A useful design must balance both with weight and manufacturability.</p>
+        </div>
+        <figure class="chart">
+          <div class="chart-key">
+            <span><span class="key-line" aria-hidden="true"></span> Elastic stiffness</span>
+            <span><span class="key-line key-fracture" aria-hidden="true"></span> Fracture resistance</span>
+          </div>
+          <svg viewBox="0 0 520 229" role="img" aria-labelledby="chart-title chart-desc">
+            <title id="chart-title">Illustrative fibre orientation trade-off</title>
+            <desc id="chart-desc">Two illustrative curves show stiffness peaking near 34 degrees and fracture resistance near 62 degrees. The vertical scale shows relative performance.</desc>
+            <path class="chart-grid" d="M46 25H497 M46 62H497 M46 99H497 M46 136H497 M46 173H497"/>
+            <path class="chart-axes" d="M46 25V173H497"/>
+            <g class="chart-labels" text-anchor="middle">
+              <text x="46" y="195">0°</text><text x="121" y="195">15°</text><text x="196" y="195">30°</text>
+              <text x="272" y="195">45°</text><text x="347" y="195">60°</text><text x="422" y="195">75°</text><text x="497" y="195">90°</text>
+              <text x="272" y="219">Fibre orientation</text>
+              <text transform="translate(17 99) rotate(-90)">Relative performance</text>
+            </g>
+            <path id="stiffness-curve" class="curve curve-stiffness" d="M46 119 C108 99 147 45 216 39 S327 105 382 112 S460 115 497 132"/>
+            <path id="fracture-curve" class="curve curve-fracture" d="M46 141 C90 136 111 111 147 119 S204 151 240 126 S305 40 357 39 S445 116 497 133"/>
+            <g id="chart-marker" visibility="hidden">
+              <path id="angle-guide" class="chart-guide" d="M272 25V173"/>
+              <circle id="stiffness-point" class="chart-point stiffness-point" cx="272" cy="55" r="5"/>
+              <circle id="fracture-point" class="chart-point fracture-point" cx="272" cy="99" r="5"/>
+            </g>
+          </svg>
+          <div class="chart-controls" hidden>
+            <label for="fibre-angle">Explore fibre angle</label>
+            <output id="angle-value" for="fibre-angle">45°</output>
+            <input type="range" id="fibre-angle" min="0" max="90" value="45" aria-describedby="chart-note">
+          </div>
+          <figcaption id="chart-note">Illustrative curves. The peaks and relative values are synthetic.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section shell" id="technology" aria-labelledby="technology-title">
+      <div class="section-heading">
+        <p class="eyebrow">Technology</p>
+        <h2 id="technology-title">Design for how structures fail</h2>
+        <p>FibrIQ aims to bring computational mechanics, optimisation and AI into the same design loop.</p>
+      </div>
+      <div class="technology-layout">
+        <figure class="science-figure">
+          <img src="assets/illustrations/bracket-phase-field.webp" alt="Composite bracket with a warm-coloured zone near its upper mounting hole illustrating a localised phase field." width="960" height="644" loading="lazy" decoding="async">
+          <figcaption><span>Phase-field fracture illustration</span><span class="spectrum" aria-hidden="true"></span></figcaption>
+        </figure>
+        <dl class="pillars">
+          <div><dt>High-fidelity computational mechanics</dt><dd>Finite element analysis models anisotropic composites. Phase-field fracture models capture how damage initiates and propagates.</dd></div>
+          <div><dt>Fracture-aware structural optimisation</dt><dd>Optimise topology and fibre routing together while balancing mass, stiffness, fracture resistance and manufacturing limits.</dd></div>
+          <div><dt>AI-accelerated predictions</dt><dd>Surrogates trained on physics simulations target near-real-time feedback within a validated design range. Detailed simulations verify selected designs and cover unfamiliar cases.</dd></div>
+          <div><dt>Cloud-based scientific computing</dt><dd>Remote compute would run demanding simulations and optimisation jobs, with shared data and connections to existing design tools.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section band" id="products" aria-labelledby="products-title">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">Product ecosystem</p>
+          <h2 id="products-title">Five modules. One platform.</h2>
+          <p>The planned ecosystem connects design, simulation and manufacturing. FibrIQ Print is the proposed entry point inside existing print-design software.</p>
+        </div>
+        <div class="ecosystem">
+          <div class="orbit" role="group" aria-label="FibrIQ product modules">
+            <div class="orbit-ring" aria-hidden="true"></div>
+            <div class="orbit-hub"><img src="assets/logos/fibriq.webp" alt="FibrIQ" width="136" height="49" loading="lazy"><span>Unified platform</span></div>
+            <a class="module-node module-print" href="#module-print" data-module="print"><img src="assets/products/print.webp" alt="" width="70" height="57" loading="lazy"><span>FibrIQ Print</span></a>
+            <a class="module-node module-sim" href="#module-sim" data-module="sim"><img src="assets/products/sim.webp" alt="" width="70" height="57" loading="lazy"><span>FibrIQ Sim</span></a>
+            <a class="module-node module-live" href="#module-live" data-module="live"><img src="assets/products/live.webp" alt="" width="70" height="57" loading="lazy"><span>FibrIQ Live</span></a>
+            <a class="module-node module-cloud" href="#module-cloud" data-module="cloud"><img src="assets/products/cloud.webp" alt="" width="70" height="57" loading="lazy"><span>FibrIQ Cloud</span></a>
+            <a class="module-node module-design" href="#module-design" data-module="design"><img src="assets/products/design.webp" alt="" width="70" height="57" loading="lazy"><span>FibrIQ Design</span></a>
+          </div>
+          <div class="module-details">
+            <article id="module-design"><h3>FibrIQ Design</h3><p>Optimise the geometry and fibre architecture of lightweight structures together.</p><ul><li>Structural topology and material distribution</li><li>Continuous fibre paths and routing</li><li>Multi-objective design across performance and manufacturing constraints</li></ul></article>
+            <article id="module-sim"><h3>FibrIQ Sim</h3><p>Verify structural performance using high-fidelity finite element analysis.</p><ul><li>Anisotropic composite material models</li><li>Phase-field fracture analysis</li><li>Predictions of damage initiation and propagation</li></ul></article>
+            <article id="module-live"><h3>FibrIQ Live</h3><p>Explore geometry, material and fibre changes with rapid approximate predictions within the surrogate’s validated design range.</p><ul><li>Machine-learning surrogates trained on physics simulations</li><li>Interactive stress and failure visualisations</li><li>Feedback to compare design options</li></ul></article>
+            <article id="module-cloud"><h3>FibrIQ Cloud</h3><p>Provide the shared computational infrastructure for the FibrIQ ecosystem.</p><ul><li>Scalable high-performance compute</li><li>Remote simulation and optimisation jobs</li><li>Centralised data and module integration</li></ul></article>
+            <article id="module-print"><h3>FibrIQ Print</h3><p>Bring performance assessment into the software engineers already use to design 3D-printed parts.</p><ul><li>Simulation-driven fibre layout before manufacturing</li><li>Interactive engineering feedback in the design tool</li><li>Access to cloud simulation and optimisation</li></ul></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="workflow" aria-labelledby="workflow-title">
+      <div class="section-heading">
+        <p class="eyebrow">Workflow</p>
+        <h2 id="workflow-title">From design to verified part</h2>
+        <p>Four stages bring computational mechanics into everyday engineering decisions.</p>
+      </div>
+      <ol class="workflow">
+        <li><span aria-hidden="true">01</span><h3>Define the design</h3><p>Specify the geometry, loads, boundary conditions, materials and manufacturing constraints.</p></li>
+        <li><span aria-hidden="true">02</span><h3>Run the physics</h3><p>Use cloud simulation and optimisation to explore geometries and fibre layouts. Assess potential failure with fracture models.</p></li>
+        <li><span aria-hidden="true">03</span><h3>Explore options interactively</h3><p>Compare alternatives using fast surrogate predictions within the validated design range.</p></li>
+        <li><span aria-hidden="true">04</span><h3>Verify and manufacture</h3><p>Run detailed numerical checks on selected designs and export verified candidates for manufacturing.</p></li>
+      </ol>
+    </section>
+
+    <section class="section band" id="demonstrations" aria-labelledby="demos-title">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">Engineering demonstrations</p>
+          <h2 id="demos-title">See the design process</h2>
+          <p>These pitch animations illustrate the research approach and proposed design workflow.</p>
+        </div>
+        <div class="demo-grid">
+          <figure class="demo">
+            <video controls playsinline preload="none" poster="assets/animations/continuous-poster.webp" width="960" height="484" aria-label="Continuous-fibre cantilever optimisation animation">
+              <source src="assets/animations/continuous.mp4" type="video/mp4">
+              <a href="assets/animations/continuous.mp4">View the continuous-fibre animation</a>
+            </video>
+            <figcaption><h3>Continuous-fibre optimisation</h3><p>A cantilever example shows how material layout and continuous fibre routing evolve together.</p></figcaption>
+          </figure>
+          <figure class="demo">
+            <video controls playsinline preload="none" poster="assets/animations/short-poster.webp" width="960" height="484" aria-label="Short-fibre cantilever optimisation animation">
+              <source src="assets/animations/short.mp4" type="video/mp4">
+              <a href="assets/animations/short.mp4">View the short-fibre animation</a>
+            </video>
+            <figcaption><h3>Short-fibre orientation</h3><p>A companion cantilever example shows local fibre orientation during material-layout optimisation.</p></figcaption>
+          </figure>
+          <figure class="demo">
+            <video controls playsinline preload="none" poster="assets/animations/live-preview-poster.webp" width="960" height="574" aria-label="Concept animation of live feedback in a print-design tool">
+              <source src="assets/animations/live-preview.mp4" type="video/mp4">
+              <a href="assets/animations/live-preview.mp4">View the print-tool concept animation</a>
+            </video>
+            <figcaption><h3>Live feedback in a design tool</h3><p>A product concept shows how a failure-index overlay could update as a designer changes the fibre angle. Values are illustrative.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="applications" aria-labelledby="applications-title">
+      <div class="section-heading">
+        <p class="eyebrow">Applications</p>
+        <h2 id="applications-title">Where every gram has a job</h2>
+        <p>Potential applications span industries where weight, durability and manufacturability shape design decisions.</p>
+      </div>
+      <dl class="applications">
+        <div><dt>Aerospace</dt><dd>Lightweight brackets, mounts and secondary structures.</dd></div>
+        <div><dt>Automotive &amp; transport</dt><dd>Weight-sensitive supports, fixtures and composite components.</dd></div>
+        <div><dt>Energy</dt><dd>Durable structures for equipment exposed to complex loading.</dd></div>
+        <div><dt>Industrial manufacturing</dt><dd>Application-specific tooling and components, with opportunities in advanced structural engineering.</dd></div>
+      </dl>
+    </section>
+
+    <section class="section band" id="about" aria-labelledby="about-title">
+      <div class="shell split about-layout">
+        <div class="section-copy">
+          <p class="eyebrow">About FibrIQ</p>
+          <h2 id="about-title">From computational research to engineering practice</h2>
+          <p>FibrIQ is an early-stage, research-driven initiative rooted in computational mechanics, fracture modelling, topology optimisation and artificial intelligence. Its long-term goal is to make physics-driven design accessible across engineering applications.</p>
+          <p>The planned commercial model combines software subscriptions, usage-based cloud computing and integration partnerships. Initial industrial pilots would validate the approach, with digital twins a longer-term direction.</p>
+        </div>
+        <section class="team" id="team" aria-labelledby="team-title">
+          <p class="eyebrow">Team</p>
+          <h2 id="team-title">The team behind FibrIQ</h2>
+          <p id="team-placeholder">Team profiles will be added here.</p>
+          <div class="team-list" id="team-list" hidden></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section shell contact" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Contact &amp; partnerships</p>
+      <h2 id="contact-title">Let's engineer the next generation of structures.</h2>
+      <p>FibrIQ welcomes industrial pilot proposals, research collaborations, software integration partnerships, investment enquiries and general enquiries.</p>
+      <p class="contact-note" id="contact-placeholder">Contact details will be added here.</p>
+      <div class="actions contact-links" data-contact-links hidden></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-layout">
+      <div>
+        <a class="brand" href="#top" aria-label="FibrIQ home"><img src="assets/logos/fibriq.webp" alt="FibrIQ" width="136" height="49" loading="lazy"></a>
+        <p>Stronger, lighter 3D-printed parts by intelligent design</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="#technology">Technology</a>
+        <a href="#products">Products</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-meta">
+        <small>© <span id="copyright-year">2026</span> FibrIQ</small>
+        <div class="footer-links" data-contact-links hidden></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
